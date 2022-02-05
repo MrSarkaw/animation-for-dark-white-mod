@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index3.css">
+</head>
+<body id="body">
+       
+    <div id="main" class="mode2">
+
+
+        <img width="60px" src="sun.png" alt="">
+        <div id="frame">
+            <div id="button" class=""></div>
+        </div>
+        <img width="60px" style="transform: rotate(250deg);" src="unnamed.png" alt="">
+   
+    </div>
+        
+</body>
+</html>
+
+
+<script>
+ 
+ let btn=document.getElementById("button");
+ let main=document.getElementById("main");
+ btn.addEventListener("click",()=>{
+    if(btn.classList!="black"){
+        btn.classList.add("transform")
+        btn.classList.add("black")
+    }else{
+        btn.classList.add("transform")
+        btn.classList.remove("black")
+    }
+
+    setTimeout(()=>{
+        btn.classList.remove("transform")
+        setTimeout(()=>{
+        if(main.classList=="mode"){
+                main.classList.remove("mode")
+                main.classList.add("mode2")
+                }else{
+                main.classList.remove("mode2")
+                main.classList.add("mode")
+                
+            }
+        },350)
+       },500)
+   
+ })
+
+  
+</script>
